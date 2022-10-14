@@ -5,9 +5,9 @@ import json
 
 
 # I need to obtain schools' codes. I need to load df containing school codes
-escuelas = pd.read_csv('escuelas_pr_capstone.csv')
-#Creating a variable containing school codes
-school_codes = escuelas['CODIGO_ESCUELA']
+escuelasData= pd.read_csv('escuelasData.csv')
+
+school_codes = escuelasData['codigo']
 
 
 # Tyler's work.
@@ -37,4 +37,6 @@ for code in school_codes:
 
 enrollment_by_acYear = pd.concat(enrollment_by_acYear_dict)
 enrollment_by_acYear.to_csv('enrollment_by_acYear.csv', index=False)
+
+df = pd.read_csv('enrollment_by_acYear.csv')
 
